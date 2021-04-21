@@ -2,7 +2,7 @@ package mt;
 
 import java.util.Arrays;
 
-public class A {
+public class MergeSort {
 
     public void mergeSort(int[] arr) {
         if (arr == null || arr.length < 2) {
@@ -51,7 +51,7 @@ public class A {
         int[] aa = new int[]{3,2,14,8,9,3,5,1,8,6,0,2,11,9};
         int[] bb = new int[]{3,2,14,8,9,3,5,1,8,6,0,2,11,9};
 
-        A s = new A();
+        MergeSort s = new MergeSort();
         s.mergeSort(aa);
         System.err.println(Arrays.toString(bb));
         System.err.println(Arrays.toString(aa));
