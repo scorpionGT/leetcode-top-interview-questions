@@ -29,7 +29,7 @@ Thumbs.db
 .idea/
 /out/
 *.iml
-
+out/
 
 ### Eclipse ###
 .metadata
