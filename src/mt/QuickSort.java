@@ -24,13 +24,6 @@ public class QuickSort {
     }
 
     public int[] subsort(int[] arr, int L, int R) {
-        if (L > R) {
-            return new int[]{-1, -1};
-        }
-        if (L == R) {
-            return new int[]{L, R};
-        }
-
         int less = L-1;
         int more = R;
         int index = L;

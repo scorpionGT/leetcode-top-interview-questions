@@ -40,6 +40,20 @@ public class HeapSort {
     // 从index位置，往下看，不断的下沉
     // 停：较大的孩子都不再比index位置的数大；已经没子节点了
     public void heapify(int[] arr, int index, int heapSize) {
+        int left = 2*index+1;
+        while (left < heapSize) {
+            int largest = ((left+1) < heapSize && (arr[left+1] > arr[left])) ? left+1 : left;
+            if (arr[index] >= arr[largest]) {
+                return;
+            }
+
+            swap(arr, index, largest);
+            index = largest;
+            left = 2*index+1;
+        }
+    }
+
+    public void heapify2(int[] arr, int index, int heapSize) {
         int left = 2*index + 1;
         while (left < heapSize) {
             int largest = (left+1 < heapSize) && arr[left+1] > arr[left] ? left+1 : left;
